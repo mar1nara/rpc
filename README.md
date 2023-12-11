@@ -17,7 +17,7 @@ buttons optional , with status and details
 - Select images and clear all fields except PARTY ID and JOIN SECRET
 
 - Now go to example.py, put your client id, and change the activity code according to your best fit
-    .`activity = {
+    . ````activity = {
             "state": "Adobe",  # anything you like
             "details": "Editing",  # anything you like
             "timestamps": {
@@ -29,4 +29,4 @@ buttons optional , with status and details
                 "large_text": "Illustrator",  # anything you like
                 "large_image": "illustrator"  # must match the image key
             }
-        }`
+        }```
