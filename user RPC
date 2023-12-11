@@ -1,0 +1,36 @@
+import rpc
+import time
+from time import mktime
+
+print("RPC was successful")
+
+client_id = ''  # Your application's client ID as a string.
+rpc_obj = rpc.DiscordIpcClient.for_platform(client_id)
+
+print("bot activated")
+
+time.sleep(5)
+start_time = mktime(time.localtime())
+
+while True:
+    activity = {
+        "state": "" # your details,
+        "details": "" # your details,
+        "timestamps": {
+            "start": start_time
+        },
+        "assets": {
+            "small_text": "" # your text ,
+            "small_image": "" # image idea,
+            "large_text": "" # your text,
+            "large_image": "" # image idea,
+        },
+        "buttons": [
+            {"label": "", "url": ""} # removeable
+        "buttons": [
+            {"label": "", "url": ""} # removeable
+        ]
+    }
+
+    rpc_obj.set_activity(activity)
+    time.sleep(900)
